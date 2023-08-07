@@ -1,6 +1,6 @@
 import sqlite3
 
-CONN = sqlite3.connect('lib/dogs.db')
+CONN = sqlite3.connect('dogs.db')
 CURSOR = CONN.cursor()
 
 class Dog:
@@ -94,7 +94,7 @@ class Dog:
         sql = """
             SELECT *
             FROM dogs
-            WHERE name = ? and breed = ?
+            WHERE name = ? AND breed = ?
             LIMIT 1
         """
 
